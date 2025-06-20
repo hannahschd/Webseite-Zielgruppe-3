@@ -1,0 +1,316 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Alexandria', Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+}
+
+.spacer {
+  height: 120vh;
+}
+
+.spacer-bottom {
+  height: 20vh;
+}
+
+.zoom-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container {
+  position: relative;
+}
+
+.zoom-text {
+  font-size: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition: none;
+  z-index: 2;
+  color: #000000;
+}
+
+.zoom-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.4);
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.icon-row {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+}
+
+.icon-group-right {
+  display: flex;
+  gap: 16px;
+}
+
+.icon {
+  width: 32px;
+  height: auto;
+  transform: scale(1);
+  opacity: 1;
+  transition: none;
+}
+
+.bottom-text {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  opacity: 0;
+  transition: none;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+
+}
+
+
+
+header {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+main {
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 5rem; 
+}
+
+footer {
+  background-color: #cfcaca;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding-bottom: 4rem;
+  padding-top: 2rem;
+  /* width: 100%;  <-- Diese Zeile entfernen */
+  box-sizing: border-box;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.bilderreihefooter {
+  width: 40px;
+  animation: cta-pulse 2s infinite alternate;
+  /* Optional: für weiches Pulsieren */
+  transition: none;
+}
+
+.bild-container {
+  max-width: 800px;
+  margin: 200px auto;
+  text-align: center;
+}
+
+.bild-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.bild-container h2 {
+  margin-top: 10rem;
+  font-size: 1.5rem;
+}
+
+.bild-container p {
+  margin: 0.5rem 0;
+}
+
+.zusatz {
+  color: #666;
+  font-style: italic;
+  margin: 70px 0;
+}
+
+.cta {
+  text-decoration: underline;
+  margin-top: 50px;
+}
+
+.Beschreibung {
+  margin-top: 30px;
+}
+
+.bilderreihe {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.bilderreihe figure {
+  margin: 0;
+  text-align: center;
+}
+
+.bilderreihe img {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.bilderreihe figcaption {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+  .bilderreihe figure:nth-child(3) img {
+  width: 100px;   /* gewünschte Breite */
+  height: auto;   /* Seitenverhältnis bleibt erhalten */
+  margin-top: 10px;
+}
+
+.holzstuhl {
+  margin: 200px 0;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #000;
+  width: 70%;
+  margin: 100px auto;
+}
+
+.Keira {
+  margin: 70px 0;
+}
+
+.scroll-scale {
+  position: sticky;
+  top: 30vh;
+  transform: scale(1);
+  transition: transform 0.4s;
+  z-index: 10;
+}
+
+
+.Perlenstuhl .bild-desktop {
+  display: none;
+}
+.Perlenstuhl .bild {
+  display: block;
+}
+
+
+.cta,
+.cta-lederstuhl,
+.cta-glasstuhl {
+  animation: cta-pulse 2s infinite alternate;
+  /* Optional: für weiches Pulsieren */
+  transition: none;
+}
+
+@keyframes cta-pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.10);
+  }
+}
+  .bild {
+  width: 100vw;
+  max-width: 100vw;
+  min-width: 100vw;
+  height: auto;
+  margin: 0;
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  margin-top: 90px;
+  margin-bottom: 40px;
+}
+  .holzstuhl,
+  .Keira\ Knightley,
+  .Lederstuhl,
+  .Glasstuhl,
+  .Marmorstuhl,
+  .Perlenstuhl {
+    margin: 16px 0;
+    padding: 0 8px;
+    text-align: center;
+  }
+h2 {
+    font-size: 1.2rem;
+  }
+
+  p,
+  .cta {
+    font-size: 1rem;
+  }
+
+  .cta,
+  .cta-lederstuhl,
+  .cta-glasstuhl {
+    text-decoration: underline;
+    margin-top: 50px;
+  }
+  .headerbild {
+    width: 100%;
+    max-width: 600px;
+    margin: 10rem auto;
+  }
+
+  /* Pulsieren für .cta, .cta-lederstuhl, .cta-glasstuhl und .bilderreihefooter nur auf mobilen Geräten */
+@media (max-width: 1370px) {
+  .cta,
+  .cta-lederstuhl,
+  .cta-glasstuhl,
+  .bilderreihefooter {
+    animation: cta-pulse 2s infinite alternate;
+    transition: none;
+  }
+}
+
+/* Auf Desktop: kein Pulsieren, stattdessen Hover-Effekt */
+@media (min-width: 1371px) {
+  .cta,
+  .cta-lederstuhl,
+  .cta-glasstuhl,
+  .bilderreihefooter,
+  footer p{
+    animation: none;
+    transition: transform 0.2s;
+  }
+  .cta:hover,
+  .cta-lederstuhl:hover,
+  .cta-glasstuhl:hover,
+  .bilderreihefooter:hover,
+  footer p:hover {
+    transform: scale(1.08);
+  }
+}
