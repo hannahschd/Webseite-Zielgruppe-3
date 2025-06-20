@@ -10,8 +10,15 @@ function animateOnScroll() {
   const scrollProgress = 1 - Math.max(0, Math.min(1, rect.top / windowHeight));
 
   // TEXT ZOOM
-  const textScale = 1 + scrollProgress * 1.5;
-  text.style.transform = `translate(-50%, -50%) scale(${textScale})`;
+ const textScale = 1 + scrollProgress * 1.5;
+text.style.transform = `translate(-50%, -50%) scale(${textScale})`;
+// Einblenden ab scrollProgress > 0.4, bleibt bis zum Ende sichtbar
+if (scrollProgress > 0.4) {
+  const textOpacity = Math.min((scrollProgress - 0.4) / 0.3, 1);
+  text.style.opacity = textOpacity;
+} else {
+  text.style.opacity = 0;
+}
 
   // BILD ZOOM
   if (scrollProgress > 0.4) {
@@ -52,3 +59,12 @@ if (scrollProgress > 0.5) {
 
 window.addEventListener('scroll', animateOnScroll); // <--- Das hinzufügen!
 animateOnScroll();
+
+window.addEventListener('scroll', function() {
+  const arrow = document.querySelector('.scroll-arrow');
+  if (window.scrollY > 10) {
+    arrow.classList.add('hide');
+  } else {
+    arrow.classList.remove('hide');
+  }
+});
