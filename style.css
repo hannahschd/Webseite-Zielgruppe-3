@@ -488,9 +488,9 @@ h2 {
   }
   .Marmorstuhl .bild,
   .Glasstuhl .bild {
-    width: 100%;
-    max-width: 400px;
-    min-width: 200px;
+    width: 500px;
+    max-width: 700px;
+    min-width: 500px;
     height: auto;
     margin: 0 0 24px 0;
     display: block;
